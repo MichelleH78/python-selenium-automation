@@ -1,0 +1,31 @@
+#Locators
+
+email input - by.ID, "ap_email"
+
+Amazon logo - By.class "a-icon a-icon-logo"
+
+Continue button - by.ID, "continue"
+
+Need help link - by.class, "a-expander-prompt"
+
+Forgot your password link - by.href "https://www.amazon.com/ap/forgotpassword?"
+
+Other issues with sign-in link - by.ID "ap-other-signin-issues-link"
+
+Create your amazon account button - by.tabindex "6"
+
+*conditions of use link - by.href "/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=508088"
+
+Privacy notice link - by.href "/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=468496"
+
+Test Case
+
+Given
+
+  Scenario: User can search for help
+    Given Open Amazon help page
+    When Input Cancel Items or Orders into search field
+    And press enter key
+    Then help results for Cancel Items or Orders are shown
+    And first result contains Cancel Items or Orders
+
